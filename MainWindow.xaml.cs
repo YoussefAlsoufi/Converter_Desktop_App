@@ -42,7 +42,7 @@ namespace Converter
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var inputValue=0.0;
-            if (Input.Text.Any() && fromCobCurrentValue.Any() && toCobCurrentValue.Any() && currentValue.Any())
+            if (Input.Text.Any() && fromCobCurrentValue.Any() && toCobCurrentValue.Any() && currentValue.Any() && int.TryParse(Input.Text, out int n))
             {
                 var fromValue = 0.0;
                 var toValue = 0.0;
@@ -109,7 +109,7 @@ namespace Converter
             }
             else
             {
-                results.Content = "Choose your Units and add a Number, please!";
+                results.Content = "Choose your Units and add a correct Number, please!";
             }
              
           
