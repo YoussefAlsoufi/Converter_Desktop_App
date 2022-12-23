@@ -119,11 +119,19 @@ namespace Converter
 
         private void Cob_To_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            toCobCurrentValue = Cob_To.SelectedItem.ToString();
+            if (Cob_To.SelectedItem != null)
+            {
+                toCobCurrentValue = Cob_To.SelectedItem.ToString();
+            }
+            
         }
         private void Cob_From_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            fromCobCurrentValue = Cob_From.SelectedItem.ToString();
+            if (Cob_From.SelectedItem != null)
+            {
+                fromCobCurrentValue = Cob_From.SelectedItem.ToString();
+            }
+            
         }
 
         public void UpdateValues()
@@ -144,8 +152,8 @@ namespace Converter
                     }
                 case "Data":
                     {
-                        //Cob_From.Items.Clear();
-                        //Cob_To.Items.Clear();
+                        Cob_From.Items.Clear();
+                        Cob_To.Items.Clear();
                         dataTypeSection = (NameValueCollection)ConfigurationManager.GetSection("Data");
                         foreach (string s in dataTypeSection.AllKeys)
                         {
