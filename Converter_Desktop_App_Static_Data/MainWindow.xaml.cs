@@ -42,7 +42,7 @@ namespace Converter
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var inputValue=0.0;
-            if (Input.Text.Any() && fromCobCurrentValue.Any() && toCobCurrentValue.Any() && currentValue.Any() && int.TryParse(Input.Text, out int n))
+            if (Input.Text.Any() && fromCobCurrentValue.Any() && toCobCurrentValue.Any() && currentValue.Any() && double.TryParse(Input.Text, out double n))
             {
                 var fromValue = 0.0;
                 var toValue = 0.0;
@@ -177,25 +177,6 @@ namespace Converter
                  
             }
         }
-
-        /*
-        private void LoadConnection (object sender, EventArgs e)
-        {
-            
-            SqlConnection connect = new MyConnection().GetConnection();
-            connect.Open();
-            SqlCommand unitType = new SqlCommand("SELECT * FROM Units_Type", connect);
-            Console.WriteLine(unitType);
-            SqlDataReader readData = unitType.ExecuteReader();
-            while (readData.Read())
-            {
-                From.Items.Add(readData["Units_Type"]);
-            }
-            connect.Close();
-        }
-        */
-
-
 
 
     }
