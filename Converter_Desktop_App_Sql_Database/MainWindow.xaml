@@ -155,11 +155,11 @@
 					</LinearGradientBrush>
 				</Grid.Background>
 				<Grid.RowDefinitions>
-					<RowDefinition Height="60"></RowDefinition>
-					<RowDefinition Height="100"></RowDefinition>
+					<RowDefinition Height="50"></RowDefinition>
+					<RowDefinition Height="80"></RowDefinition>
 					<RowDefinition Height="160"></RowDefinition>
 					<RowDefinition Height="100"></RowDefinition>
-					<RowDefinition Height="300"></RowDefinition>
+					<RowDefinition Height="350"></RowDefinition>
 				</Grid.RowDefinitions>
 
 				<StackPanel Grid.Row="0" >
@@ -175,7 +175,7 @@
 
 
 				<StackPanel Grid.Row="1" >
-					<Border Width="498" Height="68" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="30 20 0 0" BorderThickness="4" BorderBrush="Blue" CornerRadius="6">
+					<Border Width="498" Height="55" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="30 20 0 0" BorderThickness="4" BorderBrush="Blue" CornerRadius="6">
 						<Label Name="confirmationMessage"  Width="488"  VerticalAlignment="Bottom" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  Height="70" FontWeight="Bold" FontSize="24" FontFamily="Agency FB" Margin="3,0,1,2" >
 							<Label.Background>
 								<RadialGradientBrush Center="0.5,0.5">
@@ -238,30 +238,21 @@
 				</StackPanel>
 
 				<StackPanel Grid.Row="3">
-					<Border Grid.Row="3" Width="800" CornerRadius="15" BorderThickness="5" Margin="15,15,0,10" Height="80" >
+					<Border Grid.Row="3" Width="500" CornerRadius="15" BorderThickness="5"  Margin="60,15,0,10" Height="80" HorizontalAlignment="Left" >
 						<Border.BorderBrush>
 							<LinearGradientBrush>
 								<GradientStop Color="#FF0C0CC1" Offset="0.0"/>
 							</LinearGradientBrush>
 						</Border.BorderBrush>
-						<Button Content="ADD" Grid.Row="3" Width="170" BorderThickness="5" Margin="15,15,30,10" Height="77"
-								 HorizontalAlignment="right" VerticalAlignment="Center" FontSize="20"
-								 FontFamily="Impact" FontWeight="Normal" Foreground="#FFE1F3F3" Click="Add_Button_Click">
-							<Button.Background>
-								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-									<GradientStop Color="Black" Offset="0"/>
-									<GradientStop Color="#FF818BEA" Offset="1"/>
-								</LinearGradientBrush>
-							</Button.Background>
-						</Button>
 					</Border>
 
 				</StackPanel>
+				
 				<StackPanel Grid.Row="3" Orientation="Horizontal" >
 					<Label Content= "Unit Value: " Foreground="#FF3636A0" FontFamily="Bernard MT Condensed" Height="50" Width="180" VerticalContentAlignment="Center" HorizontalAlignment="center" Margin="70 10 0 0" FontSize="36" IsEnabled="False"
                    />
 					<TextBox x:Name="Input_Value" Background="PowderBlue"
-						 TextWrapping="Wrap" Width="320" FontSize="36" Margin="0,30,0,19" >
+						 TextWrapping="Wrap" Width="280" Height ="50" FontSize="36" Margin="0,30,0,19" >
 						<TextBox.RenderTransform>
 							<TransformGroup>
 								<ScaleTransform/>
@@ -272,10 +263,43 @@
 						</TextBox.RenderTransform>
 					</TextBox>
 				</StackPanel>
-				
-				<StackPanel Grid.Row="4" Width="300">
-					<Image   Grid.Row="4" Width="200" Height="130" Source="/Images/converter.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+				<StackPanel Grid.Row="3" Orientation="Vertical" >
+					<Button Content="ADD" Grid.Row="3" Width="170" BorderThickness="5"  Height="60"  FontSize="20" Margin="570,20,0,10"
+			 FontFamily="Impact" FontWeight="Normal" Foreground="#FFE1F3F3" Click="Add_Button_Click">
+						<Button.Background>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="Black" Offset="0"/>
+								<GradientStop Color="#FF818BEA" Offset="1"/>
+							</LinearGradientBrush>
+						</Button.Background>
+					</Button>
+					
 				</StackPanel>
+
+				<StackPanel Grid.Row="4" Orientation="Vertical" >
+					<Button Content="Delete" Grid.Row="3" Width="170" BorderThickness="5"  Height="60"  FontSize="20" Margin="570,0,0,10"
+			 FontFamily="Impact" FontWeight="Normal" Foreground="#FFE1F3F3" Click="Remove_Button_Click">
+						<Button.Background>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="Red" Offset="0"/>
+								<GradientStop Color="#FF818BEA" Offset="1"/>
+							</LinearGradientBrush>
+						</Button.Background>
+					</Button>
+
+					<Button Content="Edit" Grid.Row="3" Width="170" BorderThickness="5"  Height="60"  FontSize="20" Margin="570,10,0,10"
+			 FontFamily="Impact" FontWeight="Normal" Foreground="#FFE1F3F3" Click="Edit_Button_Click">
+						<Button.Background>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="Green" Offset="0"/>
+								<GradientStop Color="#FF818BEA" Offset="1"/>
+							</LinearGradientBrush>
+						</Button.Background>
+					</Button>
+					
+				</StackPanel>
+				
 				
 			</Grid>
 		</TabItem>

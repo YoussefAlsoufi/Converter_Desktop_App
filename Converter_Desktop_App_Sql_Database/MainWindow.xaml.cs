@@ -38,7 +38,18 @@ namespace Converter
                 
             }
         }
+        private void Add_Button_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
+        private void Remove_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Edit_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var inputValue=0.0;
