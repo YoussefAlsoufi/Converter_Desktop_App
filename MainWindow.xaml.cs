@@ -58,7 +58,7 @@ namespace Converter
                                 fromValue = Convert.ToDouble(lengthSection[fromCobCurrentValue]);
                                 toValue = Convert.ToDouble(lengthSection[toCobCurrentValue]);
                                 results.Content = (inputValue * fromValue / toValue).ToString();
-                                fromCobCurrentValue = toCobCurrentValue = "";
+
                             }
                             else
                             {
@@ -73,7 +73,7 @@ namespace Converter
                                 fromValue = Convert.ToDouble(dataTypeSection[fromCobCurrentValue]);
                                 toValue = Convert.ToDouble(dataTypeSection[toCobCurrentValue]);
                                 results.Content = (inputValue * fromValue / toValue).ToString();
-                                fromCobCurrentValue = toCobCurrentValue = "";
+
                             }
                             else
                             {
@@ -94,12 +94,10 @@ namespace Converter
                     if (fromCobCurrentValue == "celsiu" && toCobCurrentValue == "fahrenheit")
                     {
                         results.Content = ((inputValue * 1.8) + 32).ToString();
-                        fromCobCurrentValue = toCobCurrentValue = "";
                     }
                     else if (fromCobCurrentValue == "fahrenheit" && toCobCurrentValue == "celsiu")
                     {
                         results.Content = ((inputValue - 32) / 1.8).ToString();
-                        fromCobCurrentValue = toCobCurrentValue = "";
                     }
                     else
                     {
